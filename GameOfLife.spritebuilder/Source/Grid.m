@@ -162,7 +162,7 @@ static const int GRID_COLUMNS = 10;
     return isIndexValid;
 }
 
--(int)updateCreatures{
+-(void)updateCreatures{
     for (int i = 0;  i<[_gridArray count]; i++) {
         
         
