@@ -135,6 +135,7 @@ static const int GRID_COLUMNS = 10;
                         {
                             currentCreature.livingNeighbors += 1;
                         }
+                        return currentCreature;
                     }
                 }
             }
