@@ -140,10 +140,12 @@ static const int GRID_COLUMNS = 10;
                     
                 }
             }
+            return currentCreature.livingNeighbors;
             
+
         }
+        
     }
-        return currentCreature.livingNeighbors;
     
 }
 
