@@ -17,7 +17,9 @@
 @property (nonatomic, assign) int countNeighbors;
 @property (nonatomic, assign) int updateCreatures;
 
--(void) evolveStep;
+//-(void) evolveStep;
+-(void)evolveStep:(NSInteger)times;
+
 
 
 

@@ -87,7 +87,7 @@ static const int GRID_COLUMNS = 10;
     return _gridArray[row][column];
 }
 
--(void)evolveStep
+-(void)evolveStep:(NSInteger)times
 {
     
     [self countNeighbors];
@@ -145,6 +145,7 @@ static const int GRID_COLUMNS = 10;
         }
         
     }
+    ///not sure about this but it must return an int
     return _countNeighbors;
     
 }
@@ -159,5 +160,29 @@ static const int GRID_COLUMNS = 10;
     }
     return isIndexValid;
 }
+
+-(int)updateCreatures{
+    for (int i = 0;  i<[_gridArray count]; i++) {
+        
+        
+        ///place code here
+        for (int j = 0; j< [ _gridArray[i] count ]; j++) {
+            
+        ///insert second block code here
+            
+        
+        
+        }
+        
+        
+        
+        
+    }
+    
+    return _updateCreatures;
+    
+    
+}
+
 
 @end
