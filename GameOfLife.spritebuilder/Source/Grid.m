@@ -87,7 +87,7 @@ static const int GRID_COLUMNS = 10;
     return _gridArray[row][column];
 }
 
--(void)evolveStep:(NSInteger)times
+-(void)evolveStep
 {
     
     [self countNeighbors];
