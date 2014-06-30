@@ -181,7 +181,12 @@ static const int GRID_COLUMNS = 10;
             Creature *currentCreature = _gridArray[i][j];
            // Creature *neighbor = _gridArray[i][j];
             
-            currentCreature.livingNeighbors = 3;
+            currentCreature.livingNeighbors = 0;
+            
+            
+            
+           
+            
             
             numbAlive++;
             
@@ -209,7 +214,7 @@ static const int GRID_COLUMNS = 10;
     
    // return _updateCreatures;
     
-   // _totalAlive = *numbAlive;
+   _totalAlive = *numbAlive;
 
     
 }
