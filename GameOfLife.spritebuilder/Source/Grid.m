@@ -97,6 +97,7 @@ static const int GRID_COLUMNS = 10;
     
     //update the generation so the label's text will display the correct generation
     _generation++;
+   
 }
 
 
@@ -178,9 +179,9 @@ static const int GRID_COLUMNS = 10;
         ///insert second block code here
             
             Creature *currentCreature = _gridArray[i][j];
-            Creature *neighbor = _gridArray[i][j];
+           // Creature *neighbor = _gridArray[i][j];
             
-            currentCreature.livingNeighbors = 0;
+            currentCreature.livingNeighbors = 3;
             
             numbAlive++;
             
@@ -188,7 +189,7 @@ static const int GRID_COLUMNS = 10;
             if (currentCreature.livingNeighbors == 3)
             {
                 
-                neighbor.isAlive = YES;
+              //  neighbor.isAlive = YES;
                 currentCreature.isAlive = YES;
                 
                 
