@@ -201,12 +201,12 @@ static const int GRID_COLUMNS = 10;
         
         
         
-        _totalAlive = *numbAlive;
-    }
+            }
     
    // return _updateCreatures;
     
-    
+    _totalAlive = *numbAlive;
+
     
 }
 
