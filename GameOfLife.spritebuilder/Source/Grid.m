@@ -89,7 +89,7 @@ static const int GRID_COLUMNS = 10;
 
 -(void)evolveStep
 {
-    
+    //count neightbors
     [self countNeighbors];
     
     //update each Creature's state
@@ -138,17 +138,11 @@ static const int GRID_COLUMNS = 10;
                         }
                     }
                     
-                    
                 }
             }
-            
-
         }
         
     }
-    ///not sure about this but it must return an int
-   /// return _countNeighbors;
-    
     
 }
 
@@ -165,34 +159,31 @@ static const int GRID_COLUMNS = 10;
 
 -(void)updateCreatures{
     
+    //initialize numbAlive to 0
     int numbAlive = 0;
-    
+    // iterate through the rows
+    // 'count' will return the number of elements in the array
     for (int i = 0;  i<[_gridArray count]; i++) {
-        
-        
-        
+        // iterate through all the columns for a given row
         for (int j = 0; j< [ _gridArray[i] count ]; j++) {
-            
-        ///insert second block code here
-            
+        // access the creature in the cell that corresponds to the current row [i]/[j]column
             Creature *currentCreature = _gridArray[i][j];
-   
-            
+            //if current creature has neighbors equal to 3 then the current creature can stay alive.
             if (currentCreature.livingNeighbors == 3)
             {
-                
-              //  neighbor.isAlive = YES;
+                //if the aboe is true then set current creature isAlive to True.
                 currentCreature.isAlive = YES;
-                
-                
             }
+            //else if the above is false then test if the current creature's neighbors are less than
+            //or equal to 1 OR the current creature's neighbor is greater than or equal to 4 lives.
             else if (currentCreature.livingNeighbors <= 1 || currentCreature.livingNeighbors >= 4)
                 {
-                   //neighbor.isAlive = NO;
+                    //if the above condition is true than the current creatuer cannot be alive
+                    //it's over population, set current creature isAlive to False.
                     currentCreature.isAlive = NO;
-
             }
-            
+            //lastly after all that if else if above
+            // if currentCreature is Alive then increment the number alive by 1
             if (currentCreature.isAlive) {
                 
                 numbAlive++;
@@ -200,16 +191,11 @@ static const int GRID_COLUMNS = 10;
             }
         
         }
-        
-        
-        
-            }
+    }
     
-  
-    
+    //update the totalAlive so the label's text will display the correct population
+    //add the total numbAlive after every iteration to _totalAlive to keep score
    _totalAlive = numbAlive;
-
-    
 }
 
 
