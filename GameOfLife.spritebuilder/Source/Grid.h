@@ -17,7 +17,7 @@
 //@property (nonatomic, assign) int countNeighbors;
 //@property (nonatomic, assign) int updateCreatures;
 
--(void) countNeightbors;
+-(void) countNeighbors;
 -(void) updateCreatures;
 -(void) evolveStep;
 
