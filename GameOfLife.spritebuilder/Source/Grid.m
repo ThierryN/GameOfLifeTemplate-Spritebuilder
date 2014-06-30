@@ -169,6 +169,9 @@ static const int GRID_COLUMNS = 10;
     
     for (int i = 0;  i<[_gridArray count]; i++) {
         
+        numbAlive++;
+        
+
         
         ///place code here
         
@@ -183,12 +186,7 @@ static const int GRID_COLUMNS = 10;
             
             currentCreature.livingNeighbors = 0;
             
-            
-            
-           
-            
-            
-            numbAlive++;
+        
             
             
             if (currentCreature.livingNeighbors == 3)
