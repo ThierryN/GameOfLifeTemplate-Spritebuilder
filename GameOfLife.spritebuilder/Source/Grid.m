@@ -165,7 +165,7 @@ static const int GRID_COLUMNS = 10;
 
 -(void)updateCreatures{
     
-    int *numbAlive = 0;
+    int numbAlive = 0;
     
     for (int i = 0;  i<[_gridArray count]; i++) {
         
@@ -214,7 +214,7 @@ static const int GRID_COLUMNS = 10;
     
    // return _updateCreatures;
     
-   _totalAlive = *numbAlive;
+   _totalAlive = numbAlive;
 
     
 }
