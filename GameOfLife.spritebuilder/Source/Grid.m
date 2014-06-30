@@ -170,23 +170,14 @@ static const int GRID_COLUMNS = 10;
     for (int i = 0;  i<[_gridArray count]; i++) {
         
         numbAlive++;
-        
-
-        
-        ///place code here
-        
-        
+    
         
         for (int j = 0; j< [ _gridArray[i] count ]; j++) {
             
         ///insert second block code here
             
             Creature *currentCreature = _gridArray[i][j];
-            
-           // currentCreature.livingNeighbors = 0;
-            
-        
-            
+   
             
             if (currentCreature.livingNeighbors == 3)
             {
@@ -209,7 +200,7 @@ static const int GRID_COLUMNS = 10;
         
             }
     
-   // return _updateCreatures;
+  
     
    _totalAlive = numbAlive;
 
