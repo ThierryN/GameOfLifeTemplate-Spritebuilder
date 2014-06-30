@@ -163,24 +163,49 @@ static const int GRID_COLUMNS = 10;
 }
 
 -(void)updateCreatures{
+    
+    int *numbAlive = 0;
+    
     for (int i = 0;  i<[_gridArray count]; i++) {
         
         
         ///place code here
+        
+        
+        
         for (int j = 0; j< [ _gridArray[i] count ]; j++) {
             
         ///insert second block code here
             
-        
+            Creature *currentCreature = _gridArray[i][j];
+            Creature *neighbor = _gridArray[i][j];
+            
+            currentCreature.livingNeighbors = 0;
+            
+            numbAlive++;
+            
+            
+            if (currentCreature.livingNeighbors == 3)
+            {
+                
+                neighbor.isAlive = YES;
+                
+            }
+            else if (currentCreature.livingNeighbors <= 1 || currentCreature.livingNeighbors >= 4)
+                {
+                    neighbor.isAlive = YES;
+
+            }
         
         }
         
         
         
-        
+        _totalAlive = *numbAlive;
     }
     
    // return _updateCreatures;
+    
     
     
 }
